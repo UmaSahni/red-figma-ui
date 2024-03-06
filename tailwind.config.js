@@ -2,7 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        zcoolkuaile: ["ZCOOL KuaiLe", "sans-serif"],
+        poppins : ["Poppins", "sans-serif"],
+      },
+      backgroundColor: {
+        "191818": "#191818",
+      },
+    },
   },
   plugins: [],
 };

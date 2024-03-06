@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero {
+  background: url("/public/Images/Hero-bg.png");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  /* Ensures the background covers the entire width */
+  border: 2px solid green;
+}
+
+button {
+  background: linear-gradient(90deg, #ED0137, #F05733);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
