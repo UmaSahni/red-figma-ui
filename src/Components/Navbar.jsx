@@ -1,22 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false)
+  console.log(toggle)
   return (
-    <div className="p-9 flex items-center  border-yellow-700 border-2 justify-between">
+    <div className="p-9 flex items-center  justify-between">
+      
+      {/*<------ Hamburger Icon -------> */}
+      <div onClick={()=>setToggle(!toggle)}  className="hamburger-icon">
+        <i class={ toggle ? "fa-solid fa-times": "fa-solid fa-bars"  }></i>
+      </div>
+      
       {/*<------ Logo with brand name -------> */}
-      <div className="flex border border-sky-500 items-center">
-        <div className="border border-red-500">
-          <img src="Images/Navbar-logo.png" />
+      <div className="flex  items-center">
+        <div className="">
+          <img width={"80%"} src="Images/Navbar-logo.png" />
         </div>
         <div>
-          <h2 className="text-white text-3xl border border-pink-500 font-zcoolkuaile">
+          <h2 className="text-white text-3xl   font-zcoolkuaile">
             Saviour
           </h2>
         </div>
       </div>
 
       {/* <------ Center navigation bar -------> */}
-      <div className="text-white flex rounded-full bg-191818 p-4 w-1/2  border border-red-600">
+
+      <div className={ toggle ? "main-navigation-hidden" :  "main-navigation"}>
         <ul className="font-zcoolkuaile flex flex-1 justify-between">
           <li>Home</li>
           <li>IDO</li>
@@ -24,7 +33,7 @@ const Navbar = () => {
           <li>Roadmap</li>
           <li>Coming Soon</li>
           <li>
-            <i className="fa-solid fa-angle-down" ></i>
+            <i className="fa-solid fa-angle-down"></i>
           </li>
         </ul>
       </div>

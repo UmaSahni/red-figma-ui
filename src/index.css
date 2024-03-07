@@ -8,8 +8,6 @@
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100% auto;
-  /* Ensures the background covers the entire width */
-  border: 2px solid green;
 }
 
 button {
@@ -22,4 +20,60 @@ button {
   font-size: 0.75rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+}
+
+.main-navigation {
+  color: #fff;
+  display: flex;
+  border-radius: 1.3rem;
+  background-color: #191818;
+  padding: 1rem;
+  width: 50%;
+}
+
+.hamburger-icon {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* medium screens */
+@media screen and (max-width: 884px) {
+  .main-navigation {
+    background-color: #191818;
+    border-radius: 0px;
+    position: absolute;
+    top: 144px;
+    width: 100%;
+    left: -300%;
+    transition: all 0.5s ease-out;
+  }
+
+  .main-navigation ul,
+  .main-navigation-hidden ul {
+    flex-direction: column;
+
+  }
+
+  .main-navigation ul li,
+  .main-navigation-hidden ul li {
+    padding: 1rem;
+    margin: 1rem;
+    color: #fff;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .main-navigation-hidden {
+    background-color: #191818;
+    border-radius: 0px;
+    position: absolute;
+    top: 144px;
+    width: 100%;
+    left: 0;
+    transition: all 0.5s ease-out;
+  }
+
 }
